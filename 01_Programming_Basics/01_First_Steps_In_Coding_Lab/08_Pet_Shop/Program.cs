@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _08_Pet_Shop
+namespace Pet_Shop
 {
     class Program
     {
