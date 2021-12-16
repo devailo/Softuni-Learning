@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Restaurant.Beverage" Collapsed="true">
+    <Position X="18.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Beverage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurant.Cake" Collapsed="true">
+    <Position X="22.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAACAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Cake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurant.Coffee" Collapsed="true">
+    <Position X="20.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAEAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Coffee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurant.ColdBeverage" Collapsed="true">
+    <Position X="16" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ColdBeverage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurant.Dessert" Collapsed="true">
+    <Position X="22.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dessert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurant.Fish" Collapsed="true">
+    <Position X="25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Fish.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurant.Food" Collapsed="true">
+    <Position X="25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Food.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurant.HotBeverage" Collapsed="true">
+    <Position X="19.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HotBeverage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurant.MainDish" Collapsed="true">
+    <Position X="25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainDish.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurant.Product" Collapsed="true">
+    <Position X="21.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurant.Soup" Collapsed="true">
+    <Position X="27.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Soup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurant.Starter" Collapsed="true">
+    <Position X="27.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Starter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurant.StartUp" Collapsed="true">
+    <Position X="29.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>StartUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurant.Tea" Collapsed="true">
+    <Position X="18.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
