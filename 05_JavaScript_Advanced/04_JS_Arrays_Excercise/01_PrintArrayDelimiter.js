@@ -1,5 +1,4 @@
-function demo(){
-
-
+function demo(arr, delimiter){
+    console.log(arr.join(delimiter));
 }
-demo([1,2,3,4]);
+demo(['One', 'Two', 'Three', 'Four', 'Five'], '-');
