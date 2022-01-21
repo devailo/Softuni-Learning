@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM SELECTORS!!!!!</title>
+</head>
+<body>
+    <h1>DOM SELECTORS!</h1>
+    <p class="fancy-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <ul>
+        <li class = "fancy-text">some some</li>
+        <li>second somsom</li>
+    </ul>
+    <script>
+        let fancyTextElements = document.getElementsByClassName('fancy-text');
+        console.log(fancyTextElements);
+        console.log(fancyTextElements[0]);
+        console.log(fancyTextElements[1]);
+    </script>
+</body>
+</html>
