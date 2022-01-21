@@ -1,0 +1,9 @@
+{
+    "model": "BMW",
+    "year": 1999,
+    "facelift": "true",
+    "owner": {
+        "name": "Pesho",
+        "age": 30
+    }
+}
