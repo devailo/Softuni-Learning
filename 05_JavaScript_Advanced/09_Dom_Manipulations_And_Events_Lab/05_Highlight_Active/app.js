@@ -1,0 +1,4 @@
+function focused() {
+    document.addEventListener()
+    
+}

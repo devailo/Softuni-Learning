@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            cursor: pointer;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM EVENTS MOVIE LIST</h1>
+
+    <ul id="movie-list">
+        <li>pipi</li>
+        <li>peepa</li>
+        <li>peepee</li>
+        <li>pupi</li>
+    </ul>
+    <script>
+        let movieElements = document.querySelectorAll('#movie-list li');
+
+        movieElements.forEach(x => {
+            x.addEventListener('click', (e) => {
+                e.currentTarget.style.textDecoration = 'line-through'
+            });
+        });
+    </script>
+    <h1>event handling types</h1>
+    <div id="number">0</div>
+
+    <button id="decrement">-</button>
+    <button id="increment">+</button>
+  <script>
+      let numberElement = document.getElementById('number');
+     let incrementElement = document.getElementById('increment');
+     let decrementElement = document.getElementById('decrement');
+
+     incrementElement.onclick = () => {
+        let currNum = Number(numberElement.textContent);
+        numberElement.textContent = currNum + 1;
+     }
+
+     decrementElement.addEventListener('click', function(){
+        let currNum = Number(numberElement.textContent);
+        numberElement.textContent = currNum - 1;
+     })
+  </script>
+</body>
+</html>
