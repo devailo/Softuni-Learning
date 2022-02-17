@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fancy-text{
+            font-style: italic;
+            font-size: 33px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .fancier-text{
+            font-style: italic;
+            font-size: 33px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <button id="buttonec" disabled>BUTTON</button>
+
+    <script>
+        let divElement = document.createElement('div');
+        divElement.textContent = 'Some Text Here';
+        divElement.classList.add('fancy-text')
+
+        let rootElement = document.getElementById('root');
+        rootElement.appendChild(divElement);
+
+        divElement.addEventListener('mouseover', (e)=>{
+            e.currentTarget.classList.add('fancier-text');
+        })
+        divElement.addEventListener('mouseout', (e)=>{
+            e.currentTarget.classList.remove('fancier-text');
+        })
+
+        let submitBtn = document.getElementById('buttonec');
+
+        setTimeout(()=>{
+            submitBtn.removeAttribute('disabled');
+        },2000)
+
+        submitBtn.addEventListener('click',(e)=>{
+            if (divElement.classList.contains('fancier-text')) {
+                divElement.classList.remove('fancier-text');
+            }else{
+            divElement.classList.add('fancier-text');
+            }
+        })
+    </script>
+</body>
+</html>

@@ -29,7 +29,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\index.test.js"
+            "program": "${file}"
+            //"${workspaceFolder}\\index.test.js"
         }
     ]
 }
