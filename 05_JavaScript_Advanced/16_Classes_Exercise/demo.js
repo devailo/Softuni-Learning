@@ -14,4 +14,16 @@ console.log(new_obj);
 console.log(new_obj2);
 console.log(obj3);
 
+let arr = [1,2,3,4];
 
+for (const iterator of Object.entries(obj3)) {
+    console.log(iterator);
+}
+
+for (const key in obj3) {
+   console.log(obj3[key]);
+}
+
+for (const iterator of arr) {
+    console.log(iterator);
+}
