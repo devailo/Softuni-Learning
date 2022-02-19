@@ -110,3 +110,4 @@ anotherEntity = {
 };
 // repository.add(anotherEntity); // should throw a TypeError
 // repository.del(-1); // should throw Error for invalid id
+
