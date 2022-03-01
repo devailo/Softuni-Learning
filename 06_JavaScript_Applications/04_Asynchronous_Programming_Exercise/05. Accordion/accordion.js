@@ -15,22 +15,22 @@ async function solution() {
         let divExtra = createElement('div', '', ['class', 'extra']);
         let p = createElement('p');
 
+        main.appendChild(divAccordion);
+        button.addEventListener('click', toggle);
         
         divHead.appendChild(span);
         divHead.appendChild(button);
         
+        
         divExtra.appendChild(p);
-        button.addEventListener('click', toggle);
-        
-        divAccordion.appendChild(divExtra);
         divAccordion.appendChild(divHead);
+        divAccordion.appendChild(divExtra);
         
-        main.appendChild(divAccordion);
     });
 
     async function toggle(ev) {
-        const p = ev.target.parentNode.parentNode.children[0].children[0];
-        const extra = ev.target.parentNode.parentNode.children[0];
+        const p = ev.target.parentNode.parentNode.children[1].children[0];
+        const extra = ev.target.parentNode.parentNode.children[1];
 
         const id = ev.target.id;
         let url = `http://localhost:3030/jsonstore/advanced/articles/details/${id}`;

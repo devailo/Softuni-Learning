@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>My movies</h1>
+
+    <input type="text" name="title" id="title" />
+    <button id="add-movie">Add</button>
+    <button id="load-movies">Load</button>
+
+    <ul id="movie-list">
+
+    </ul>
+
+    <script>
+        const url = 'http://localhost:3030/jsonstore';
+        const titleElement = document.getElementById('title')
+        const buttonElement = document.getElementById('load-movies');
+        const addButtonElement = document.getElementById('add-movie');
+        const movieListEl = document.getElementById('movie-list');
+
+        buttonElement.addEventListener('click', () => {
+            fetch(`${url}/messenger`)
+                .then(res => res.json())
+                .then(movies => {
+                    movieListEl.innerHTML = '';
+                    Object.values(movies)
+                        .forEach(movie => {
+                            let movieEl = document.createElement('li');
+                            movieEl.textContent = movie.author;
+                            movieListEl.appendChild(movieEl);
+                        });
+                });
+        });
+
+        addButtonElement.addEventListener('click', () => {
+            let author = titleElement.value;
+            fetch(`${url}/messenger`, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify({ author })
+            })
+                .then(res => res.json())
+                .then(movie => {
+                    let movieEl = document.createElement('li');
+                    movieEl.textContent = movie.author;
+                    movieListEl.appendChild(movieEl);
+                })
+        })
+    </script>
+</body>
+
+</html>
