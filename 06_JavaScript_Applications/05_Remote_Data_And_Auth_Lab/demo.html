@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML FORMS</title>
+</head>
+
+<body>
+    <h1>Forms</h1>
+    <form method="POST" id="login-form">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="enter username..." />
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="passowrd" name="password">
+        </div>
+        <div>
+            <input type="submit" id="submit-button" value="login">
+        </div>
+    </form>
+    <script>
+        let formElement = document.getElementById('login-form');
+        // let submitElement = document.getElementById('submit-button');
+
+        // let usernameElement  = document.getElementById('username');
+
+        // submitElement.addEventListener('click', (e)=>{
+        //     e.preventDefault();
+        //     console.log(usernameElement.value);
+        // })
+        formElement.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let formData = new FormData(e.currentTarget);
+
+            let { username, password } = Object.fromEntries(formData);
+            let data = JSON.stringify({ email: username, password })
+
+            // let username = formData.get('username');
+            // let password = formData.get('password');
+
+            fetch('http://localhost:3030/users/login', {
+                method: 'POST',
+                headers: {
+                    'content-type': "aplication/json"
+                },
+                body: data
+            })
+                .then(res => res.json())
+                .then(user => {
+                    console.log(user);
+                    localStorage.setItem('_id', user._id);
+                    localStorage.setItem('username', user.username);
+                    localStorage.setItem('accessToken', user.accessToken);
+                })
+                .catch(err => {
+                    console.log('error');
+                })
+        });
+    </script>
+</body>
+
+</html>

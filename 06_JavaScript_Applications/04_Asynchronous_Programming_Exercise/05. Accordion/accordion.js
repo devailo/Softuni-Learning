@@ -17,15 +17,14 @@ async function solution() {
 
         main.appendChild(divAccordion);
         button.addEventListener('click', toggle);
-        
+
         divHead.appendChild(span);
         divHead.appendChild(button);
-        
-        
+
         divExtra.appendChild(p);
         divAccordion.appendChild(divHead);
         divAccordion.appendChild(divExtra);
-        
+
     });
 
     async function toggle(ev) {
@@ -43,7 +42,7 @@ async function solution() {
         let hiddenToggle = ev.target.textContent === 'More';
 
         extra.style.display = hiddenToggle ? 'block' : 'none';
-        ev.target.textContent = hiddenToggle ? 'Less': 'More';
+        ev.target.textContent = hiddenToggle ? 'Less' : 'More';
     };
 
     function createElement(type, content, attributes = []) {
@@ -55,7 +54,6 @@ async function solution() {
         if (attributes.length > 0) {
             for (let i = 0; i < attributes.length; i += 2) {
                 element.setAttribute(attributes[i], attributes[i + 1]);
-
             }
         }
         return element;
