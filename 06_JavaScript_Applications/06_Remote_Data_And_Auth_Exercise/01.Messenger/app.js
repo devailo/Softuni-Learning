@@ -6,23 +6,23 @@ function attachEvents() {
     document.getElementById('refresh').addEventListener('click', loadAllMessages);
 }
 
-async function postMessage(){
-    const [author, content] = [document.getElementById('author'),document.getElementById('content')];
+async function postMessage() {
+    const [author, content] = [document.getElementById('author'), document.getElementById('content')];
     if (author.value !== '' || content.value !== '') {
-        await request(url, {author: author.value, content: content.value})
+        await request(url, { author: author.value, content: content.value })
         author.value = '';
         content.value = '';
     }
 }
 
-async function loadAllMessages(){
+async function loadAllMessages() {
     const res = await fetch(url);
     const data = await res.json();
 
-    messages.value = Object.values(data).map(({author, content}) => `${author}: ${content}`).join('\n');
+    messages.value = Object.values(data).map(({ author, content }) => `${author}: ${content}`).join('\n');
 }
 
-async function request(url, option){
+async function request(url, option) {
     if (option) {
         option = {
             method: 'POST',
