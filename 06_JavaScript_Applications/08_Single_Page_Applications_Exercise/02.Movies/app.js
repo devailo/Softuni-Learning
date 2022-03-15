@@ -4,6 +4,7 @@ import { homePage } from "./home.js";
 import { loginPage } from "./login.js";
 import { registerPage } from "./register.js";
 import { createPage } from "./create.js";
+import { updateNav } from "./util.js";
 
 const routes = {
     '/': homePage,
@@ -28,8 +29,10 @@ function onNavigate(event) {
     }
 }
 
-function logout(){
-    alert('logged out');
+function logout() {
+    localStorage.removeItem('user');
+    updateNav();
 }
 
+updateNav();
 homePage();
