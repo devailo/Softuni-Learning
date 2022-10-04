@@ -17,7 +17,6 @@ const itemTemplate = (name, match) => html`
 <li class=${(match && name.toLowerCase().includes(match.toLowerCase())) ? 'active' : '' }>${name}</li>
 `
 
-
 const main = document.body;
 update();
 
@@ -26,12 +25,9 @@ function update(match = '') {
    render(result, main);
 }
 
-
-
 function search() {
    const match = document.getElementById('searchText').value;
    update(match);
-
 }
 
 function countMatches(towns, match) {

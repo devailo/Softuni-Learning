@@ -15,8 +15,6 @@ function getTowns(e){
     const root = document.getElementById('root');
     const towns = document.getElementById('towns').value.split(', ');
 
-    const ul = document.createElement('ul');
-
     const result = listTemplate(towns);
 
     render(result, root);
