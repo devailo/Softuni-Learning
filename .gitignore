@@ -4,3 +4,5 @@ bin
 /05_JavaScript_Advanced/index.html
 /05_JavaScript_Advanced/functions.js
 
+node_modules
+
