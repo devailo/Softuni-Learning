@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1234",
+        "name": "Room",
+        "description": "Nice and cozy",
+        "city": "Veliko Tarnovo",
+        "beds": 2,
+        "price": 130,
+        "imgUrl": "/static/assets/room1.jpg"
+    },
+    {
+        "id": "0a2c35",
+        "name": "Elizabot",
+        "description": "bla bla de la ble ble ",
+        "city": "Sofia",
+        "beds": 1,
+        "price": 444,
+        "imgUrl": "/static/assets/room2.jpg"
+    }
+]
