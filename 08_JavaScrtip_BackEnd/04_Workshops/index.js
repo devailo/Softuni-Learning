@@ -1,32 +1,20 @@
 const express = require('express');
-const hbs = require('express-handlebars').create({
-    extname: '.hbs'
-})
+const databaseConfig = require('./config/database');
+const expressConfig = require('./config/express')
+const routesConfig = require('./config/routes')
 
-const homeController = require('./controllers/homeController')
-const catalogController = require('./controllers/catalogController')
-const createController = require('./controllers/createController')
-const defaultController = require('./controllers/defaultController');
-const defaultTitle = require('./middlewares/defaultTitle');
+async function start() {
+    const app = express();
 
-const app = express();
-
-app.engine('.hbs', hbs.engine);
-app.set('view engine', '.hbs')
-
-app.use(express.urlencoded({extended: true}))
-app.use('/static', express.static('static'))
-
-app.use(defaultTitle('Dakov Housing'))
-
-app.use(homeController)
-app.use('/catalog', catalogController)
-app.use('/create', createController)
+    expressConfig(app)
+    routesConfig(app)
+    await databaseConfig(app)
 
 
 
 
-//last controller
-app.all('*', defaultController)
+    app.listen(3000)
+}
 
-app.listen(3000)
+
+start()
