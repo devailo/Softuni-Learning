@@ -1,0 +1,22 @@
+<section id="create-section" class="">
+
+    <h1 class="item">New Facility</h1>
+
+    <main class="item padded align-center">
+
+        <form class="layout left large" method="post" action="/facility/create">
+            
+            <div class="col aligned">
+                <label><span>Label</span><input {{#if error.fields.name}}class="field-error"{{/if}} type="text" name="label" value="{{body.label}}"></label>
+                <label><span>Image URL</span><input {{#if error.fields.imgUrl}}class="field-error"{{/if}} type="text" name="iconUrl" value="{{body.iconUrl}}"></label>
+            </div>
+                <div class="align-center">
+                    <input class="action" type="submit" value="Publish Item">
+                </div>
+            </div>
+
+        </form>
+
+    </main>
+
+</section>
