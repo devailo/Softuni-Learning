@@ -4,7 +4,12 @@ const hbs = require('express-handlebars').create({
     extname: '.hbs'
 })
 
+const cookieParser = require('cookie-parser')
 const defaultTitle = require('../middlewares/defaultTitle');
+const auth = require('../middlewares/auth')
+
+const jwtSecret = 'dastyu789i'
+
 
 module.exports = (app) => {
 
@@ -13,5 +18,7 @@ app.set('view engine', '.hbs')
 
 app.use(express.urlencoded({extended: true}))
 app.use('/static', express.static('static'))
+app.use(cookieParser())
+app.use(auth(jwtSecret))
 
 app.use(defaultTitle('Dakov Housing'))}
