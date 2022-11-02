@@ -7,7 +7,7 @@
         <form class="layout left large" method="post" action="/auth/login">
             {{#if error}}
             <div class="error-box">
-                {{#each error.messages}}
+                {{#each error}}
                 <p>{{this}}</p>
                 {{/each}}
             </div>
@@ -22,7 +22,7 @@
             <input class="cta action" type="submit" value="Sign In">
 
         </form>
-
+        <footer class="layout">Don't have an account? <a href="/auth/register">sign up</a> here</footer>
     </main>
 
 </section>

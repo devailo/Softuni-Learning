@@ -1,0 +1,32 @@
+<section id="create-section" class="">
+
+    <h1 class="item">Register</h1>
+
+    <main class="item padded align-center">
+
+        <form class="layout left large" method="post" action="/auth/register">
+            {{#if error}}
+            <div class="error-box">
+                {{#each error}}
+                <p>{{this}}</p>
+                {{/each}}
+            </div>
+            {{/if}}
+            <div class="aligned">
+                <label><span>username</span><input {{#if error.fields.name}}class="field-error" {{/if}} type="text"
+                        name="username" value="{{body.username}}"></label>
+                <label><span>password</span><input {{#if error.fields.name}}class="field-error" {{/if}} type="password"
+                        name="password" value="{{body.password}}"></label>
+                <label><span>Repeat password</span><input {{#if error.fields.name}}class="field-error" {{/if}}
+                        type="password" name="repass" value="{{body.password}}"></label>
+            </div>
+
+            <input class="cta action" type="submit" value="Sign Up">
+
+        </form>
+
+
+        <footer class="layout">Already have an account? <a href="/auth/login">sign in</a> here</footer>
+    </main>
+
+</section>

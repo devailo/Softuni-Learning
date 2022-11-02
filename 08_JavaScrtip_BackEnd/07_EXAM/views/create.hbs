@@ -1,0 +1,22 @@
+    <main>
+        <section id="create-container">
+            <div class="create-container-info">
+                <h1>Create Blog</h1>
+                <form method="post">
+                    <label>Title:</label>
+                    <input name="title" type="text" id="title" value="{{body.title}}">
+
+                    <label>Image:</label>
+                    <input name="imageUrl" type="text" id="imageUrl" placeholder="https://" value="{{body.imageUrl}}">
+
+                    <label>Content:</label>
+                    <textarea name="content" id="content" name="content">{{body.content}}</textarea>
+
+                    <label>Blog Category:</label>
+                    <input name="category" type="text" id="category" value="{{body.category}}">
+
+                    <input type="submit" id="btn" value="POST">
+                </form>
+            </div>
+        </section>
+    </main>

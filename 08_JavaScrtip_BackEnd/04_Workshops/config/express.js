@@ -6,7 +6,8 @@ const hbs = require('express-handlebars').create({
 
 const cookieParser = require('cookie-parser')
 const defaultTitle = require('../middlewares/defaultTitle');
-const auth = require('../middlewares/auth')
+const auth = require('../middlewares/auth');
+const userNav = require('../middlewares/userNav');
 
 const jwtSecret = 'dastyu789i'
 
@@ -20,5 +21,6 @@ app.use(express.urlencoded({extended: true}))
 app.use('/static', express.static('static'))
 app.use(cookieParser())
 app.use(auth(jwtSecret))
+app.use(userNav())
 
 app.use(defaultTitle('Dakov Housing'))}

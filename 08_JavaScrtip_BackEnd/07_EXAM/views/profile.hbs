@@ -1,0 +1,51 @@
+    <main>
+        <section id="user">
+            <div class="user-info">
+                <div class="user-logo">
+                    <img src="static/images/user-logo.webp">
+                </div>
+                <h1 class="user-email">{{user.email}}</h1>
+                <h2 class="created-blogs-count">Total Created Blogs: {{user.blogs}}</h2>
+                <h2 class="followed-blogs-count">Total Followed Blogs: {{user.followers}}</h2>
+            </div>
+        </section>
+        <section class="profile-blogs">
+            <div class="created-blogs">
+                <h2 class="section-title">Created Blogs</h2>
+                <div class="info">
+                    <h2 class="title">Around the Weekend</h2>
+                    <h4 class="genre">Women's Health</h4>
+                    <div class="see-more">
+                        <a href="#">See More...</a>
+                    </div>
+                </div>
+
+                <!-- If there are no created blogs
+                    <h2 class="no-blog-in-profile">You haven't published a blog yet...</h2>
+                -->
+            </div>
+
+            <div class="followed-blogs">
+                <h2 class="section-title">Followed Blogs</h2>
+                <div class="info">
+                    <h2 class="title">The Greatest Sales Letter of All Time</h2>
+                    <h4 class="genre">Copywriting</h4>
+                    <div class="see-more">
+                        <a href="#">See More...</a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h2 class="title">Best Finance and Investment Blogs</h2>
+                    <h4 class="genre">Finance</h4>
+                    <div class="see-more">
+                        <a href="#">See More...</a>
+                    </div>
+                </div>
+                
+                <!-- If there are no followed blogs
+                <h2 class="no-blog-in-profile">You have no blogs followed yet…</h2>
+                -->
+            </div>
+
+        </section>
+    </main>

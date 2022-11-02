@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Page</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <!-- In case of error, you should display div with class "errorContainer" -->
+    <!-- You can choose to display the first error or all of them (error message/s in your opinion) -->
+
+    <!-- <div>
+            <div class="errorContainer">
+                <p>Error</p>
+            </div>
+        </div> -->
+
+    <div class="navigation">
+        <nav>
+            <img src="./images/logo.jpg">
+            <ul>
+                <!-- Guest users and Logged users -->
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blogs</a></li>
+                <!--For guest users-->
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+                <!--For loggin users-->
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Create Blog</a></li>
+                <li><a href="#">Logout</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+
+    <main>
+        <section id="edit-container">
+            <div class="edit-container-info">
+                <h1>Edit Blog</h1>
+                <form>
+                    <label>Title:</label>
+                    <input name="" type="text" id="name" value="Around the Weekend">
+
+                    <label>Image:</label>
+                    <input name="" type="text" id="image"
+                        value="https://www.allearsenglish.com/wp-content/uploads/2018/10/1032-300x169.jpeg">
+
+                    <label>Content:</label>
+                    <textarea id="content"
+                        name="">Hi friends! How was the weekend? I hope you had an amazing one. This blog post is a way to bring it back old school and share some more real-life adventures. Quite a few of you let me know that you missed the style of blogging from the past (I do, too!) so I'm trying to do it in a way that's low-key and still focused on my experience, instead of the kids' experience if that makes sense? It can be tricky because the kids are obviously a huge part of my life (and by far the most exciting and such an enjoyable part of my life). I'm still trying to navigate blogging in a way that feels authentic to me without overdoing it on kid content, while continuing to create value-driven posts, too.</textarea>
+
+                    <label>Blog Category:</label>
+                    <input name="" type="text" id="catelory" value="Women's Health">
+
+                    <input type="submit" id="btn" value="EDIT">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>Back-End 2022</footer>
+
+</body>
+
+</html>

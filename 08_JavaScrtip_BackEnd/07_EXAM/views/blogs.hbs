@@ -1,0 +1,17 @@
+<main>
+
+    <section id="all-blogs-page">
+        <article class="all-blogs-title">
+            <h1>All Blogs</h1>
+        </article>
+{{#if blogs}}
+{{#each blogs}}
+      {{>blogCatalog}}
+{{/each}}
+        <!--If there are still no blogs in the database display:-->
+        <!--<article class="not-available-blogs">
+                <h1>No blogs created yet.</h1>
+            </article>-->
+{{/if}}
+    </section>
+</main>

@@ -1,0 +1,13 @@
+templates
+database
+user registration and session
+- cookies and session
+- password hashing
+- JSON web token
+Error handling
+full CRUD
+- catalog
+- details
+- create
+- edit
+- delete
