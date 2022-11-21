@@ -1,8 +1,9 @@
 <p>
   sup sup sup
+</p>
+<input #nameInput>
+<button (click)="addUserHandler(nameInput)">Add User</button>
 
-  </p>
+<app-test [users]="users"></app-test>
 
-<app-list>
-  <app-list-item></app-list-item>
-</app-list>
+<app-user-list></app-user-list>

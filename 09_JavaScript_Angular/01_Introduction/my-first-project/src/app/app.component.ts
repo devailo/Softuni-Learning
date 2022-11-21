@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-first-project';
+  users = [
+    { name: 'ivan' }, { name: 'pecko' }
+  ]
+
+  constructor(
+    @Inject('Test') test: string
+  ) {
+    console.log(test);
+
+  }
+
+  addUserHandler(nameInput: HTMLInputElement): void {
+    const { value: name } = nameInput
+    this.users.push({ name })
+    nameInput.value = ''
+  }
+
+
 }
