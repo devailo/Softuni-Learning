@@ -1,5 +1,27 @@
-<div>
+<!-- <div class="links">
     <a routerLink="/user/list">User List</a>
     <a routerLink="/post/list">Post List</a>
 
-</div>
+</div> -->
+
+
+<section class="flex-container">
+    <div>
+        <button id="home-btn" class="button" routerLink="/">Home</button>
+    </div>
+        
+    <div class="buttons-browse">
+        <div class="browse">
+            <button class="button" routerLink="/user/list">User list</button>
+            <button class="button" routerLink="/post/list">Post list</button>
+        </div>
+    </div>
+    <div class="buttons-user" *ngIf="!isLoggedIn">
+        <button class="button" routerLink="/auth/login">Login</button>
+        <button class="button" routerLink="/auth/register">Register</button>
+    </div>
+    <div class="buttons-user" *ngIf="isLoggedIn">
+        <button class="button" routerLink="/auth/profile">{{user?.firstName}}'s Profile</button>
+        <button class="button" routerLink="/auth/logout">Logout</button>
+    </div>
+</section>

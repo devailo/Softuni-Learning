@@ -1,0 +1,33 @@
+.flex-container {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #ddd;
+
+}
+
+#home-btn::before {
+    after: "";
+
+}
+
+#home-btn {}
+
+.buttons-user {}
+
+.button {
+    background-color: rgb(200, 176, 224);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
