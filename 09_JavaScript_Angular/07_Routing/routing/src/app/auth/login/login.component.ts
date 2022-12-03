@@ -14,8 +14,8 @@ export class LoginComponent {
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router, private authService: AuthService) {
   }
-  loginHandler(): void {
 
+  loginHandler(): void {
     this.authService.user = {
       id: 1,
       firstName: 'John',
@@ -28,13 +28,13 @@ export class LoginComponent {
     this.router.navigate([returnUrl])
   }
 
-  HandleFormSubmit(form: NgForm ) : void{
+  HandleFormSubmit(form: NgForm): void {
     if (form.invalid) {
       return;
     }
-    const value: {email: string; password: string} = form.value;
+    const value: { email: string; password: string } = form.value;
     console.log(value);
-    form.setValue({email: '', password:''})
-    
+    form.setValue({ email: '', password: '' })
+
   }
 }

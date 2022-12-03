@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 //TODO: change adress for exam if needed
-const CONNECTION_STRING = 'mongodb://localhost:27017/mindblogDb'
+const CONNECTION_STRING = 'mongodb://localhost:27017/mindblogDb2'
 
 module.exports = async (app) => {
     try {
