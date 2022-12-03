@@ -21,6 +21,4 @@ export class NavigationComponent {
   get user() {
     return this.authService.user;
   }
-
- 
 }
