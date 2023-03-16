@@ -25,7 +25,7 @@ authController.post('/register', async (req, res) => {
         if (req.body.password != req.body.repass) {
             throw new Error('Passwords don\'t match!')
         }
-        const token = await register(req.body.email, req.body.username, req.body.password);
+        const token = await register(req.body.username, req.body.email, req.body.password);
 
         res.cookie('token', token)
         res.redirect('/');
@@ -36,8 +36,8 @@ authController.post('/register', async (req, res) => {
             title: 'Register page',
             errors,
             body: {
-                email: req.body.email,
-                username: req.body.username
+                email: req.body.username,
+                username: req.body.email
             }
         });
     }

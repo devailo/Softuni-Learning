@@ -1,0 +1,219 @@
+@import url("https://use.fontawesome.com/releases/v5.10.2/css/all.css");
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: poppins;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .welcome-section {
+    width: 1920px;
+    height: 700px;
+    background: url(./images/landing-photo.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .navbar {
+    max-width: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    margin-left: 280px;
+
+  }
+  
+  .links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 300px;
+
+  }
+  
+  .links li {
+    margin: 0 10px;
+  }
+  
+  .links li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+ 
+  .links li a.black-btn {
+    background-color: #370511;
+    color: white;
+    border-radius: 55px;
+    padding: 10px 20px;
+  }
+  
+  .welcome-content {
+    text-align: left;
+    color: black;
+    margin-top: 50px;
+    margin-left: 300px;
+  }
+  
+  .welcome-content h1 {
+    font-size: 48px;
+    margin: 0;
+  }
+  
+  .welcome-content h2 {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+  
+  .welcome-content p {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #370511;
+    color: white;
+    border-radius: 55px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+ 
+  
+  .grid-section {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .grid-section h1 {
+    font-size: 48px;
+    margin: 0;
+  }
+  
+  .grid-section h2 {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+  
+  .grid-container {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    margin-top: 50px;
+  }
+  
+  .grid-item {
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px 8px 0px 0px;
+  }
+  
+  .grid-item h3 {
+    font-size: 24px;
+    margin: 20px 0 10px 0;
+  }
+  
+  .grid-item p {
+    margin-left: 5%;
+    width: 90%;
+    text-align: left;
+  }
+  
+  .button-bordered {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #370511;
+    border: 1px solid #370511;
+    border-radius: 55px;
+  }
+
+  .footer {
+    height: 240px;
+    width: 1920px;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .footer-logo h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+  
+ 
+  .footer-column ul {
+    list-style: none;
+    margin: 0px 24px;
+
+  }
+  
+  .footer-column li {
+    margin-bottom: 15px;
+  }
+  
+  .footer-column a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-social h4 {
+    font-size: 12px;
+    font-weight: 100;
+    margin-bottom: 10px;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+   
+  .social-links i {
+    font-size: 20px;
+  }
+  

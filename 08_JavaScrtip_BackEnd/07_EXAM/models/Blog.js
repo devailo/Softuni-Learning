@@ -23,6 +23,15 @@ const blogSchema = new Schema({
     },
 });
 
+// if title is unique
+
+// blogSchema.index({ title: 1},{
+//     collation: {
+//         locale: 'en',
+//         strength: 2
+//     }
+//  } )
+
 
 const Blog = model('Blog', blogSchema);
 

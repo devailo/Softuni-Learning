@@ -1,0 +1,19 @@
+
+        <section id="editPage">
+            {{#with toy}}
+            <form id='editForm' action="toys/{{_id}}/edit" method="post">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" placeholder="Title..." value={{title}}>
+                <label for="charity">For Charity:</label>
+                <input type="text" id="charity" name="charity" placeholder="For Charity..." value={{charity}}>
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" placeholder="Price..." value={{price}}>
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description"
+                    placeholder="Description..." value={{description}}
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" placeholder="Category..." value={{category}}>
+                <input type="submit" class="edit" value="Edit Toy Offer">
+            </form>
+            {{/with}}
+        </section>

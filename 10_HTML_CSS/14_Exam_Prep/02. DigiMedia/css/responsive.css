@@ -1,0 +1,14 @@
+/* TODO: Add responsive styles here... */
+
+@media (max-width: 600px){
+
+    .navbar{
+        justify-content: center;
+    }
+    .navbar-light .navbar-brand {
+        margin-right: 0%;
+    }
+    .hero img{
+        display:none;
+    }
+}

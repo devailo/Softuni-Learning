@@ -1,0 +1,24 @@
+<section class="search">
+    <h1>Search</h1>
+
+    <form class="search-form" action="#" method="post">
+        <input type="text" class="search-title" name="title" placeholder="Search Title...">
+        <input type="text" class="search-charity" name="charity" placeholder="Search Charity...">
+        <button type="submit" class="btn-search">Search</button>
+    </form>
+
+    {{#if toys}}
+    <div class="search-result">
+        <div class="search-list">
+            {{#each toys}}
+            {{>toy}}
+            {{/each}}
+        </div>
+
+    </div>
+    {{else}}
+    <div class="no-match">
+        <p>No match was found!</p>
+    </div>
+    {{/if}}
+</section>

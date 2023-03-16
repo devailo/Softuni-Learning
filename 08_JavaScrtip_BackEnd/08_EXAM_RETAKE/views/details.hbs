@@ -1,0 +1,29 @@
+<section id="detailsPage">
+    {{#with toy}}
+    <div id="detailsInfo">
+        <h1>Title: {{title}}</h1>
+        <div class="info"><img src="{{image}}"></div>
+        <div class="info">
+            <h3>CHARITY: {{charity}}</h3>
+            <h3>CATEGORY: {{category}}</h3>
+            <h3>DESCRIPTION: {{description}}</h3>
+            <h2>PRICE: ${{price}}</h2>
+        </div>
+        <!--If there is user logged in-->
+        <div class="buttons">
+            {{#if isUser}}
+            <a href="/toys/{{_id}}/buy" class="buy-btn">Buy</a>
+            {{#if isOwner}}
+            <a href="/toys/{{_id}}/edit" class="edit-btn">Edit</a>
+            <a href="/toys/{{_id}}/delete" class="delete-btn">Delete</a>
+            {{#if hasBought}}
+            <p><span class="buy">Thank You For Your Purchase :)</span></p>
+        </div>
+        {{/if}}
+        {{/if}}
+        {{/if}}
+
+
+    </div>
+    {{/with}}
+</section>

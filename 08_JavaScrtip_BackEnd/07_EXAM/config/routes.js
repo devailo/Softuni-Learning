@@ -9,9 +9,10 @@ module.exports = (app) => {
 
     app.use('/', homeController)
     app.use('/auth', authController)
-    app.use('/blog', hasUser(), blogController)
-    app.use('/profile', profileController)
+    app.use('/blog',  blogController)
+    app.use('/profile',hasUser(), profileController)
     app.use('/blogs', catalogController)
+    // app.use('/:id/details', details)
 
     app.use('*', (req,res)=> {
         res.render('404')   

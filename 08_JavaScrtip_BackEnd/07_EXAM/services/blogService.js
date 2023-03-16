@@ -9,11 +9,11 @@ async function createBlog(blog) {
 }
 
 async function getById(id) {
-    return Ad.findById(id).populate('owner').lean()
+    return Blog.findById(id).lean()
 }
 
 async function deleteById(id) {
-    return Ad.findByIdAndDelete(id)
+    return Blog.findByIdAndDelete(id)
 }
 
 async function editById(id, data) {

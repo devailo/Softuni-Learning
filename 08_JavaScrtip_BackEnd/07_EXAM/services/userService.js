@@ -29,7 +29,7 @@ async function register(username, email, password) {
 async function login(email, password) {
     const user = await User.findOne({ email }).collation({ locale: 'en', strength: 2 });
     if (!user) {
-        throw new Error('Incorrect emial or password!');
+        throw new Error('Incorrect email or password!');
     }
 
     const hasMatch = await bcrypt.compare(password, user.hashedPassword)
@@ -42,11 +42,11 @@ async function login(email, password) {
 
 }
 
-function createSession({ _id, email, username }) {
+function createSession({ _id, username, email }) {
     const payload = {
         _id,
+        username,
         email,
-        username
     }
 
     return jwt.sign(payload, JWT_SECRET);

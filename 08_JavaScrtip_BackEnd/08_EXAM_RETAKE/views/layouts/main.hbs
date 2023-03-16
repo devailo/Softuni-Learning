@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="../../static/css/styles.css">
+</head>
+
+<body>
+    {{#if errors}}
+    <div>
+        <div class="errorContainer">
+            {{#each errors}}
+            <p>{{this}}</p>
+            {{/each}}
+        </div>
+    </div>
+    {{/if}}
+
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/toys">Catalog</a></li>
+                {{#if user}}
+                <li><a href="/toys/create">Create toy</a></li>
+                <li><a href="/search">Search</a></li>
+                <li><a href="/auth/logout">Logout</a></li>
+                {{else}}
+                <li><a href="/auth/login">Login</a></li>
+                <li><a href="/auth/register">Register</a></li>
+                {{/if}}
+            </ul>
+        </nav>
+        {{{body}}}
+        <footer>@SoftUni - JS Back-end - Charity Christmas 2022</footer>
+    </div>
+</body>
+
+</html>

@@ -32,9 +32,6 @@ blogController.post('/create', async (req, res) => {
         category: req.body.category,
         owner: req.user._id,
     }
-
-
-
     try {
         //check if the is some empty field
         if (Object.values(blog).some(x => !x)) {
@@ -77,8 +74,6 @@ blogController.post('/:id/edit', async (req, res) => {
         content: req.body.content,
         category: req.body.category,
     }
-
-
 
     try {
         //check if the is some empty field
